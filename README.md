@@ -1,4 +1,9 @@
 # Lumen Oauth2 Api With Passport
+Basically this is a starter kit for you to integrate Lumen with [Oauth2](https://oauth.net/2/) with Lumen Passport
+
+## What's Added
+ - [Lumen 5.8](https://github.com/laravel/lumen/tree/v5.8.0).
+ - [Lumen Passport](https://github.com/dusterio/lumen-passport/tree/0.2.14)
 
 ## Quick Start
 
