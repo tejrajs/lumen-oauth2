@@ -9,7 +9,7 @@ git clone https://github.com/tejrajs/lumen-oauth2.git
 
 ``` bash
 # Get inside to the Repo
-cd laravel-vue-test
+cd lumen-oauth2
 ```
 
 ``` bash
