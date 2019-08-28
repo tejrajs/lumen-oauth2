@@ -5,7 +5,6 @@ namespace App\Exceptions;
 use Exception;
 use App\Traits\ApiResponser;
 use Illuminate\Http\Response;
-use GuzzleHttp\Exception\ClientException;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -75,13 +74,6 @@ class Handler extends ExceptionHandler
             $errors = $exception->validator->errors()->getMessages();
 
             return $this->errorResponse($errors, Response::HTTP_UNPROCESSABLE_ENTITY);
-        }
-
-        if ($exception instanceof ClientException) {
-            $message = $exception->getResponse()->getBody();
-            $code = $exception->getCode();
-
-            return $this->errorMessage($message, $code);
         }
 
         if (env('APP_DEBUG', false)) {
